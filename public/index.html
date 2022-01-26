@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Gitlab Control</title>
+  <meta property="og:title" content="Gitlab Control" />
+  <meta name="twitter:title" content="Gitlab Control" />
+  <meta name="description" content="Pipline Settings Branch:
+  <meta name="author" content="Oliver Donzyk"/>
+  <link href='./img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="./img/favicon.ico" />
+  <meta name="twitter:image" content="./img/favicon.ico" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@username" />
+  <meta name="twitter:creator" content="@username" />
+  <meta property="og:url" content="https://donzyk.gitlab.io/gitlab-pipeline/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gitlab Control" />
+
+  <meta name="generator" content="" />
+  <link rel="canonical" href="https://donzyk.gitlab.io/gitlab-pipeline/" />
+  <link rel="alternate" href="https://donzyk.gitlab.io/gitlab-pipeline/index.xml" type="application/rss+xml" title="Gitlab Control">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://donzyk.gitlab.io/gitlab-pipeline/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://donzyk.gitlab.io/gitlab-pipeline/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://donzyk.gitlab.io/gitlab-pipeline/css/highlight.min.css" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://donzyk.gitlab.io/gitlab-pipeline/">Gitlab Control</a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a title="Home" href="https://donzyk.gitlab.io/gitlab-pipeline/">Home</a>
+          </li>
+          <li>
+            <a title="About" href="https://donzyk.gitlab.io/gitlab-pipeline/about.html">About</a>
+          </li>
+          <li><a id="signin"/></li>
+        </ul>
+      </div>
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Gitlab Control" href="https://donzyk.gitlab.io/gitlab-pipeline/">
+            <img class="avatar-img" src="https://donzyk.gitlab.io/gitlab-pipeline/img/favicon.ico" alt="Gitlab Control" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<div id="header-big-imgs" data-num-img=1 data-img-src-1="https://donzyk.gitlab.io/gitlab-pipeline/img/sphere.jpg" ></div>
+  <header class="header-section has-img">
+    <div class="intro-header big-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>Gitlab Control</h1>
+              <hr class="small">
+              <span class="page-subheading">Pipline Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="img-desc" style="display: inline;"></span>
+    </div>
+
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>Gitlab Control</h1>
+              <hr class="small">
+              <span class="page-subheading">GitLab Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="well">
+          <h3 id="pipline-settings">Pipline Settings</h3>
+          <br>
+          <div>
+          <form action="#" method="post" id="pipeline-form">
+            <label for="BRANCH">Branch:</label><br>
+            <select id="BRANCH" name="BRANCH" Size="5">
+              <option selected="selected">option 1</option>
+            </select><br>
+            <br>
+            <label for="CONFIG">Config:</label><br>
+            <div>
+              <input type="radio" id="adhoc" name="CONFIG" value="AdHoc">
+              <label for="adhoc">Adhoc</label>
+              <br>
+              <input type="radio" id="debug" name="CONFIG" value="Debug" >
+              <label for="debug">Debug</label>
+              <br>
+              <input type="radio" id="Run_Tests_Only" name="CONFIG" value="Run_Tests_Only" checked="checked">
+              <label for="Run_Tests_Only">Run_Tests_Only</label>
+              <br>
+              <input type="radio" id="Release" name="CONFIG" value="Release">
+              <label for="Release">Release</label>
+            </div>
+            <br>
+            <div>
+              <label for="APP_TARGET">App Target:</label><br>
+              <select name="APP_TARGET" id="APP_TARGET" Size="5">
+                <option>Beta</option>
+                <option selected="selected">DE</option>
+                <option>NL</option>
+                <option>PL</option>
+                <option>Enterprise</option>
+              </select>
+              </div>
+              <br>
+              <br>
+              <label for="STAGE">Stage:</label><br>
+              <div>
+                <input type="radio" id="Production" name="STAGE" value="Production" checked="checked">
+                <label for="Production">Production</label>
+                <br>
+                <input type="radio" id="Development" name="STAGE" value="Development">
+                <label for="Development">Development</label>
+                <br>
+                <input type="radio" id="DevelopmentEPP" name="STAGE" value="DevelopmentEPP">
+                <label for="DevelopmentEPP">DevelopmentEPP</label>
+                <br>
+                <input type="radio" id="StagingEPP" name="STAGE" value="StagingEPP">
+                <label for="StagingEPP">StagingEPP</label>
+              </div>
+            </form>
+
+            <form action="#" method="post" id="uitest-form" >
+              <div id="only_Testing" >
+                <br>
+                <label for="feature">Only_Testing:</label><br>
+                <div>
+                  <input type="checkbox" id="BaseMobileTests" name="BaseMobileTests" checked>
+                  <label for="BaseMobileTests">BaseMobileTests</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="UITestSuiteGeneral" name="UITestSuiteGeneral" checked>
+                  <label for="UITestSuiteGeneral">UITestSuiteGeneral</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="UITestSuiteWishlist" name="UITestSuiteWishlist" checked>
+                  <label for="UITestSuiteWishlist">UITestSuiteWishlist</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="UITestSuiteMyBase" name="UITestSuiteMyBase" checked>
+                  <label for="UITestSuiteMyBase">UITestSuiteMyBase</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="UITestSuiteStartPage" name="UITestSuiteStartPage" checked>
+                  <label for="UITestSuiteStartPage">UITestSuiteStartPage</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="UITestSuiteProductList" name="UITestSuiteProductList" checked>
+                  <label for="UITestSuiteProductList">UITestSuiteProductList</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="UITestSuiteProductDetailPage" name="UITestSuiteProductDetailPage" checked>
+                  <label for="UITestSuiteProductDetailPage">UITestSuiteProductDetailPage</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="UITestSuiteCart" name="UITestSuiteCart" checked>
+                  <label for="UITestSuiteCart">UITestSuiteCart</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="UITestSuitePush" name="UITestSuitePush" checked>
+                  <label for="UITestSuitePush">UITestSuitePush</label>
+                </div>
+              </div>
+            </form>
+
+            <br>
+            <div>
+              <label for="ENVIRONMENT">Environment:</label><br>
+              <select name="ENVIRONMENT" id="ENVIRONMENT" Size="2">
+                <option selected="selected">Device</option>
+                <option>Simulator</option>
+              </select><br>
+            </div>
+
+            <form action="#" method="post" id="feature_toggle-form">
+              <div>
+                <br>
+                <label for="feature">Feature Toggle:</label><br>
+                <div>
+                  <input type="checkbox" id="USE_NTS_DE" name="USE_NTS_DE">
+                  <label for="USE_NTS_DE">USE_NTS_DE</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="USE_APPSHIRE" name="USE_APPSHIRE">
+                  <label for="USE_APPSHIRE">USE_APPSHIRE</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="USE_FAV_BRANDS" name="USE_FAV_BRANDS">
+                  <label for="USE_FAV_BRANDS">USE_FAV_BRANDS</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="USE_BEAUTY_PROFILE" name="USE_BEAUTY_PROFILE">
+                  <label for="USE_BEAUTY_PROFILE">USE_BEAUTY_PROFILE</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="USE_INSTANA" name="USE_INSTANA">
+                  <label for="USE_INSTANA">USE_INSTANA</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="USE_BOOTSTRAP_CONFIG" name="USE_BOOTSTRAP_CONFIG">
+                  <label for="USE_BOOTSTRAP_CONFIG">USE_BOOTSTRAP_CONFIG</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="USE_TEALIUM_IN_BEAUTYMIRROR" name="USE_TEALIUM_IN_BEAUTYMIRROR">
+                  <label for="USE_TEALIUM_IN_BEAUTYMIRROR">USE_TEALIUM_IN_BEAUTYMIRROR</label>
+                </div>
+              </div>
+            <br><br>
+            <div>
+              <button class="favorite styled" type="submit" id="api-example">Run the Pipeline</button>
+            </div>
+          </form>
+        </div>
+        <!-- Special div hidde before -->
+        <div id="pipeline-after" style="display:none;">
+          <p id="api-output">Please stand by...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <ul class="list-inline text-center footer-links">
+            <li>
+              <a href="mailto:youremail@domain.com" title="Email me">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://donzyk.gitlab.io/gitlab-pipeline/index.xml" title="RSS">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="credits copyright text-muted">
+            Oliver Donzyk
+            &nbsp;&bull;&nbsp;
+            2021
+            &nbsp;&bull;&nbsp;
+            <a href="https://#/">Gitlab Control</a>
+          </p>
+          <p class="credits theme-by text-muted">
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/highlight.min.js"></script>
+  <script> hljs.initHighlightingOnLoad(); </script>
+  <script> renderMathInElement(document.body); </script>
+
+<script>
+
+  // Todo fill in your Project ID
+$(function() {
+    const url = 'https://gitlab.com/api/v4/projects/';
+    const project_id= 'YOURE PROJECT ID';
+
+    // enable or disable div with
+
+  $('input').change( function () {
+
+    if ( $('#Run_Tests_Only').is(':checked')) {
+         $("#only_Testing").show("slow");
+    } else {
+         $("#only_Testing").hide("slow");
+    }
+  });
+
+    // Todo fill in your Token
+    $.ajax(url + project_id + '/repository/branches',{
+        'method':'GET',
+        'headers':{
+        'PRIVATE-TOKEN': 'YOURE TOKEN',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        },
+        'success':
+
+        function(branches) {
+            const select = $('#BRANCH');
+            select.empty();
+            branches.forEach((branch) => select.append(`<option value="${branch.name}">${branch.name}</option>`));
+            //Select first Item
+            select.val($("#BRANCH option:first").val());
+            }
+            ,
+            'error':function(output) {
+            $('#api-output').html('<b>Fehler beim Laden der Branches</b>')
+            }
+    });
+
+
+    $( "form" ).submit(function( event ) {
+        // Uses two forms to seperate the normal key values from the feature toggles. The feature toggles will then be mapped to comma separated string and combined again.
+          var env_variables =  $('#pipeline-form').serializeArray().map(({name, value}) => ({
+          key: name, value: value, variable_type: 'env_var'
+        }))
+
+        const toggleForm =  $('#feature_toggle-form').serializeArray().map(({name, value}) => ({
+         key: name, value: value
+        }))
+
+        const uitestForm =  $('#uitest-form').serializeArray().map(({name, value}) => ({
+         key: name, value: value
+        }))
+
+        const toggles = toggleForm.filter(({key, value}) => ( key != 'ENVIRONMENT' )).map(({key, value}) => (key)).join(",");
+          env_variables.push({key: 'FEATURE_TOGGLE', value: toggles});
+
+        const uitests = uitestForm.filter(({key, value}) => ( key != 'ENVIRONMENT' )).map(({key, value}) => (key)).join(",");
+          env_variables.push({key: 'ONLY_TESTING', value: uitests});
+
+        const branch_name = env_variables.find(element => element.key === 'BRANCH').value
+
+      // Todo fill in your Token
+        $.ajax(url + project_id + '/pipeline',{
+            'data':JSON.stringify({
+            'ref': branch_name,
+            'variables': env_variables
+            }),
+            'method':'POST',
+            'headers':{
+            'PRIVATE-TOKEN': 'YOURE TOKEN',
+            'Content-Type': 'application/json'
+            },
+            'success': function(output) {
+                $('#api-output').html('<b>Pipeline status is ' + output['status'] + '</b> &nbsp; <a href="' + output['web_url'] + '">View pipeline</a><br><br>' + '<input type="button" value="Zurück" onClick="javascript:history.back()">');
+                },
+            'error':function(output) {
+                $('#api-output').html('<b>Error</b>')
+                }
+        });
+
+    $('#pipeline-form').hide();
+    $('#pipeline-after').show();
+
+    event.preventDefault();
+    })
+})
+
+</script>
+</body>
+</html>
+

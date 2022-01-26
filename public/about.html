@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Gitlab Control</title>
+  <meta property="og:title" content="Gitlab Control" />
+  <meta name="twitter:title" content="Gitlab Control" />
+  <meta name="description" content="Pipline Settings Branch:
+  <meta name="author" content="Oliver Donzyk"/>
+  <link href='https://donzyk.gitlab.io/gitlab-pipeline/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://donzyk.gitlab.io/gitlab-pipeline/img/favicon.ico" />
+  <meta name="twitter:image" content="https://donzyk.gitlab.io/gitlab-pipeline/img/favicon.ico" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@username" />
+  <meta name="twitter:creator" content="@username" />
+  <meta property="og:url" content="https://donzyk.gitlab.io/gitlab-pipeline/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gitlab Control" />
+
+  <link rel="canonical" href="https://donzyk.gitlab.io/gitlab-pipeline/" />
+  <link rel="alternate" href="https://donzyk.gitlab.io/gitlab-pipeline/index.xml" type="application/rss+xml" title="Gitlab Control">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://donzyk.gitlab.io/gitlab-pipeline/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://donzyk.gitlab.io/gitlab-pipeline/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://donzyk.gitlab.io/gitlab-pipeline/css/highlight.min.css" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://donzyk.gitlab.io/gitlab-pipeline/">Gitlab Control</a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a title="Home" href="https://donzyk.gitlab.io/gitlab-pipeline/">Home</a>
+          </li>
+          <li>
+            <a title="About" href="https://donzyk.gitlab.io/gitlab-pipeline/about.html">About</a>
+          </li>
+          <li><a id="signin"/></li>
+        </ul>
+      </div>
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Gitlab Control" href="https://donzyk.gitlab.io/gitlab-pipeline/">
+            <img class="avatar-img" src="https://donzyk.gitlab.io/gitlab-pipeline/img/favicon.ico" alt="Gitlab Control" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<div id="header-big-imgs" data-num-img=1 data-img-src-1="https://donzyk.gitlab.io/gitlab-pipeline/img/sphere.jpg" ></div>
+  <header class="header-section has-img">
+    <div class="intro-header big-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>Gitlab Control</h1>
+              <hr class="small">
+              <span class="page-subheading">Pipeline Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="img-desc" style="display: inline;"></span>
+    </div>
+
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>Gitlab Control</h1>
+              <hr class="small">
+              <span class="page-subheading">GitLab Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <header class="header-section ">
+            <div class="intro-header no-img">
+                  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                      <h1>Deployment</h1>
+                      <hr class="small">
+                      <span class="page-subheading">Nice way to trigger Pipelines</span>
+                    </div>
+                  </div>
+             </div>
+           </header>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <article role="main" class="blog-post">
+          <p>Provide a short solution with eg. Gitlab Pages for:</p>
+          <ul>
+            <li>Trigger pipelines over a simple frontend with given variable combinations</li>
+            <li>Usage of API calls in the background</li>
+            <li>Own frontend System to provide individual view´s &amp; controlls</li>
+          </ul>
+          <p>That a new fast try to keep a better usage in kind of jenkins or Gitlab variables</p>
+          <h3 id="planned-fo-next-time">planned fo next time</h3>
+          <ul>
+            <li>provide more needed feature in that case of frontend</li>
+            <li>More statistics for pipelines and alert stuff</li>
+          </ul>
+          <h3 id="planned-fo-next-time">special thanks goes to</h3>
+          <ul>
+            <li>Guido Lange</li>
+            https://github.com/gylxan
+            <li>Arthur Lerke</li>
+            <br>
+            for working on the js and gitlab-ci.yaml solutions
+          </ul>
+        </article>
+        <ul class="pager blog-pager">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <ul class="list-inline text-center footer-links">
+            <li>
+              <a href="mailto:youremail@domain.com" title="Email me">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://donzyk.gitlab.io/gitlab-pipeline/" title="RSS">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="credits copyright text-muted">
+            Oliver Donzyk
+            &nbsp;&bull;&nbsp;
+            2021
+            &nbsp;&bull;&nbsp;
+            <a href="https://#/">Gitlab Control</a>
+          </p>
+          <p class="credits theme-by text-muted">
+            Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://donzyk.gitlab.io/gitlab-pipeline/js/main.js"></script>
+  <script src="https://donzyk.gitlab.io/gitlab-pipeline/js/highlight.min.js"></script>
+  <script> hljs.initHighlightingOnLoad(); </script>
+  <script> renderMathInElement(document.body); </script>
+
+</body>
+</html>
+
